@@ -1,72 +1,58 @@
-import turtle
-import time
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #panda {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        #proposal {
+            display: none;
+            text-align: center;
+            font-size: 18px;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="panda">
+        <img src="panda.png" alt="Panda">
+    </div>
 
-# Function to draw a panda
-def draw_panda():
-    panda = turtle.Turtle()
-    panda.speed(3)
-    panda.penup()
-    panda.goto(-100, 0)
-    panda.pendown()
-    panda.fillcolor("black")
-    panda.begin_fill()
-    panda.circle(50)
-    panda.end_fill()
-    panda.penup()
-    panda.goto(-60, 20)
-    panda.pendown()
-    panda.fillcolor("white")
-    panda.begin_fill()
-    panda.circle(10)
-    panda.end_fill()
-    panda.penup()
-    panda.goto(-40, 20)
-    panda.pendown()
-    panda.fillcolor("white")
-    panda.begin_fill()
-    panda.circle(10)
-    panda.end_fill()
-    panda.penup()
-    panda.goto(-70, -10)
-    panda.pendown()
-    panda.setheading(-60)
-    panda.width(5)
-    panda.circle(80, 120)
-    panda.penup()
-    panda.goto(-50, -10)
-    panda.pendown()
-    panda.setheading(-120)
-    panda.width(5)
-    panda.circle(-80, 120)
-    panda.hideturtle()
+    <div id="proposal">
+        <p>Hello!</p>
+        <p>I hope you're doing well.</p>
+        <p>I wanted to tell you something important.</p>
+        <p>I've had feelings for you for a while now, and I can't keep it to myself anymore.</p>
+        <p>You're incredibly special to me, and I admire you in so many ways.</p>
+        <p>I was wondering if you would like to go out on a date with me sometime?</p>
+        <p>Please take your time to think about it, and let me know whenever you're ready.</p>
+        <p>I truly value our friendship, and I'll be here regardless of your decision.</p>
+        <p>Thank you for listening, and I hope we can continue to share many wonderful moments together.</p>
+        <p>Take care!</p>
+    </div>
 
-# Function to propose to crush
-def propose_to_crush():
-    turtle.Screen().bgcolor("lightblue")
-    draw_panda()
-    time.sleep(1)
+    <script>
+        // Function to animate the panda
+        function animatePanda() {
+            var panda = document.getElementById('panda');
+            panda.style.display = 'block';
+            panda.style.animation = 'pop-up 1s ease-in-out';
+        }
 
-    # Display proposal messages
-    print("Hello!")
-    time.sleep(2)
-    print("I hope you're doing well.")
-    time.sleep(2)
-    print("I wanted to tell you something important.")
-    time.sleep(2)
-    print("I've had feelings for you for a while now, and I can't keep it to myself anymore.")
-    time.sleep(3)
-    print("You're incredibly special to me, and I admire you in so many ways.")
-    time.sleep(3)
-    print("I was wondering if you would like to go out on a date with me sometime?")
-    time.sleep(3)
-    print("Please take your time to think about it, and let me know whenever you're ready.")
-    time.sleep(3)
-    print("I truly value our friendship, and I'll be here regardless of your decision.")
-    time.sleep(3)
-    print("Thank you for listening, and I hope we can continue to share many wonderful moments together.")
-    time.sleep(3)
-    print("Take care!")
+        // Function to display the proposal messages
+        function proposeToCrush() {
+            var proposal = document.getElementById('proposal');
+            proposal.style.display = 'block';
+        }
 
-    turtle.done()
-
-propose_to_crush()
+        // Delay the animation and proposal display
+        setTimeout(animatePanda, 1000);
+        setTimeout(proposeToCrush, 2000);
+    </script>
+</body>
+</html>
